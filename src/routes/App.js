@@ -1,6 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
-
+import '../css/App.css';
+import {Link, Outlet} from 'react-router-dom'
 function App() {
   return (
     <div className="App">
@@ -12,11 +11,11 @@ function App() {
             <p>Меню</p>
             <ul>
               <li>Новая</li>
-              <li>Список</li>
+              <li><Link to={`todos`} >Список</Link></li>
             </ul>
         </div>
         <div className="central-panel">
-          <p>Здесь будет список задачи</p>
+          <Outlet />
         </div>
       </div>
     </div>
